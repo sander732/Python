@@ -19,13 +19,14 @@ geboorteDag   = 10
 
 #TODO Zoek op in https://www.w3schools.com/python/python_datetime.asp
 #  hoe je een datetime Object kan maken.
-geboortedatum = None
+geboortedatum = datetime.datetime(geboortedatum)
 
 #TODO Zoek op hoe je de huidige datum ophaalt
 vandaag = datetime.datetime.now()
 
 leeftijd = vandaag - geboortedatum
 dagen = leeftijd.days
+print(dagen)
 #TODO bereken jaren door dagen te delen door 365 (gehele deling)
 #     bereken dagen door de rest van de deling van dagen gedeeld door 365
 jaren = None
