@@ -1,1 +1,3 @@
-print('hello world')
+import datetime
+vandaag = datetime.datetime.now()
+print(vandaag)

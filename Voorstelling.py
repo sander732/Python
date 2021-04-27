@@ -12,27 +12,32 @@ geboorteJaar = input('In welk jaar ben je geboren: ')
 geboorteJaar = int(geboorteJaar) 
 
 #TODO geboorteMaand en geboorteDag opvragen en omzetten naar int
-geboorteMaand = 8
-geboorteDag   = 10
-
+geboorteMaand = input('in de hoeveelste maant ben je geboeren')
+geboorteDag   = input('op welke dag ben je geboren')
+geboorteMaand= int(geboorteMaand)
+geboorteDag = int(geboorteDag)
 #Process : Gegevens verwerken
 
 #TODO Zoek op in https://www.w3schools.com/python/python_datetime.asp
 #  hoe je een datetime Object kan maken.
-geboortedatum = datetime.datetime(geboortedatum)
+Geboortedatum = datetime.datetime(geboorteJaar, geboorteMaand, geboorteDag)
 
 #TODO Zoek op hoe je de huidige datum ophaalt
 vandaag = datetime.datetime.now()
 
-leeftijd = vandaag - geboortedatum
-dagen = leeftijd.days
+leeftijd= vandaag - Geboortedatum
+dagen= leeftijd.days
 print(dagen)
 #TODO bereken jaren door dagen te delen door 365 (gehele deling)
 #     bereken dagen door de rest van de deling van dagen gedeeld door 365
-jaren = None
-dagen = None
+jaren = dagen//365
+dagen = dagen % 365
 
 #Output
 print()
 print('Hallo, ik ben', naam)
 #TODO vervolledig zodat je dezelfde output krijgt als in de opgave.
+print('Ik woon in', woonplaats)
+print('Ik ben geboren op', Geboortedatum)
+print('Ik ben nu', leeftijd)
+print('Ik ben nu',jaren,'jaar en', dagen, 'dagen')
