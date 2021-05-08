@@ -12,10 +12,9 @@ Schrijf de functie zinbevat(zin, woord)
 """
 
 def zinbevat(zin, woord):
-    woorden = zin.split(zin)
     andwoord = False
 
-    for woord in woorden:
+    if woord in zin:
         andwoord = True
     return andwoord
 
