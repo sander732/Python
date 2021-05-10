@@ -18,7 +18,7 @@ print("Oefening 1 : getallen")
 #De lijst met getallen maken
 getallen = []
 grooter= []
-keiner=[]
+kleiner=[]
 #TODO 1.1 de list getallen opvullen met 20 random getallen tussen 1 en 100
 #
 vis= 0
@@ -49,3 +49,6 @@ while testing < 20:
         kleiner.append(test)
     testing += 1
 print(kleiner)
+print("er zijn ", len(grooter)," groter dan het gemiddelde en er zijn ", len(kleiner),' kleiner dan het gemiddelde het gemiddelde was ', gemiddelde)
+getallen.sort()
+print("het klienste getal is " ,getallen[0], " en het grootste getal ", getallen[-1])
