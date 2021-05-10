@@ -12,10 +12,13 @@ of het gemiddelde voorkomt in de lijst.
 hoeveel getallen er kleiner zijn dan het gemiddelde.
 hoeveel getallen er groter zijn dan het gemiddelde.
 """
+import math
 import random
 print("Oefening 1 : getallen")
 #De lijst met getallen maken
 getallen = []
+grooter= []
+keiner=[]
 #TODO 1.1 de list getallen opvullen met 20 random getallen tussen 1 en 100
 #
 vis= 0
@@ -25,4 +28,24 @@ while vis < 20:
     vis += 1
 
 print(getallen)
+#het gemidelde van de getallen 
+lang=len(getallen)
+totaal=sum(getallen)
+gemiddelde= totaal / lang
+print(gemiddelde)
+gemiddelde= int(gemiddelde)
 
+testing=0
+while testing < 20:
+    test=getallen[testing]
+    if test > gemiddelde:
+        grooter.append(test)
+    testing += 1
+print(grooter)
+testing=0
+while testing < 20:
+    test=getallen[testing]
+    if test < gemiddelde:
+        kleiner.append(test)
+    testing += 1
+print(kleiner)
