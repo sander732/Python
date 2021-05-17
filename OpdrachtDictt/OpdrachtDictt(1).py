@@ -22,20 +22,19 @@ def cleanLine(lijn):
 
 #Start hoofdprogramma
 #TODO 1 het path aanpassen naar waar je python.txt gedownload hebt.
-tekstFile = open("D:\\Mijn Drive\\schooljaar_2020-2021\\Python\\Code\\OpdrachtDictt\\Pyton.txt", mode="r", encoding="utf-8")
+tekstFile = open("D:\\Mijn Drive\\schooljaar_2020-2021\\Python\\Code\\OpdrachtDictt\\python.txt", mode="r", encoding="utf-8")
 
 woordDict = dict() #Een lege dictionary
 while True:
     lijn = tekstFile.readline()
     #TODO 2 lijn omzetten in kleine letters
-    lijn = 'TODO Dit vervangen'
+    
     lijn.lower()
     #TODO 3 als de lijn een lege String ('') is uit de loop gaan
     #    Een blanco lijn, midden het bestand is '\n', enkel na de laatste lijn krijg je ''
-    if lijn == '':
-        lijn = '\n' 
-
-    lijn = cleanLine(lijn)
+    if lijn == '' or lijn == '\n' :
+        lijn = cleanLine(lijn)
+    
     #TODO 4 de list woorden maken door de functie split(' ') toe te passen op lijn
     woorden = lijn.split(' ')
 
@@ -46,10 +45,10 @@ while True:
     frequetieDict = {}
     for woorden in lijn:
         if woorden in frequetieDict:
-            aantal = frequetieDict(woorden)
+            aantal = frequetieDict[woorden]
         else:
             aantal = 0
-        frequetieDict = aantal + 1
+        frequetieDict[woorden] = aantal + 1
 
 
 
