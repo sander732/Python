@@ -10,9 +10,9 @@ print(randomList)
 frequetieDict = {}
 for getal in randomList:
     if getal in frequetieDict:
-        aantal = frequetieDict(getal)
+        aantal = frequetieDict[getal]
     else:
         aantal = 0
-    frequetieDict = aantal + 1
+    frequetieDict[getal] = aantal + 1
 print("list :", randomList)
 print("Dict :", frequetieDict)
