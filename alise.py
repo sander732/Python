@@ -1,8 +1,8 @@
 Name=input("Wat is je naam")
 if Name == 'alise':
-    print("hallo alise welkom")
+    print("hey alise welkom")
     print('-----------------')
 else:
-    print("hallo onbekende asshole")
+    print("hey" , Name, "you not welkom here ")
     print("----------------")
-print("and of pragama")
+print("and of the script")
